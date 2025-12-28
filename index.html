@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van Gogh Particle Polaroid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #0a0a0a;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      #root {
+        height: 100vh;
+        width: 100vw;
+      }
+      /* Custom cursor for interaction */
+      .canvas-container {
+        cursor: crosshair;
+      }
+      /* Developing photo effect */
+      @keyframes develop {
+        0% { filter: blur(20px) contrast(0.5); opacity: 0.3; }
+        100% { filter: blur(0px) contrast(1); opacity: 1; }
+      }
+      .developing {
+        animation: develop 8s ease-in forwards;
+      }
+      /* Polaroid Eject animation */
+      @keyframes eject {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(-110%); }
+      }
+      .eject-photo {
+        animation: eject 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+      }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Three.js and MediaPipe CDNs -->
+    <script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</body>
+</html>

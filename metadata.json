@@ -1,0 +1,7 @@
+{
+  "name": "Artisanal Vision: Van Gogh Particle & Polaroid Studio",
+  "description": "A creative application combining a retro Polaroid camera with a gesture-controlled Van Gogh particle system. Interact with art via hand gestures and capture moments as developing Polaroids.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
